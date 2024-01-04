@@ -3,8 +3,7 @@
 - JDK 11
 - Maven 3
 - MySQL 8 
-- test
-
+##
 # Technologies 
 - Spring MVC
 - Spring Security
