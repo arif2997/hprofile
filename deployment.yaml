@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hprofile
+  namespace: hprofile
+spec:
+  selector:
+    matchLabels:
+      app: hprofile
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: hprofile
+    spec:
+      containers:
+      - name: hprofile
+        image: 339713042958.dkr.ecr.us-east-1.amazonaws.com/actapp:14
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hprofile-service
+spec:
+  selector:
+    app: hprofile
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: NodePort
