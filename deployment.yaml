@@ -1,3 +1,12 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: ecr-registry-secret
+type: Opaque
+data:
+  username: QUtJQVU2R0RaVklIRjVZNVA2NlU=
+  password: M0xsRnV1ZTFWOGtHL3lVS2RoSWZ5UHpkd0pHYzdGblVuczBBbC9tKw==
+--- 
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -15,6 +24,8 @@ spec:
       containers:
       - name: hprofile
         image: 339713042958.dkr.ecr.us-east-1.amazonaws.com/actapp:14
+      imagePullSecrets:
+      - name: ecr-registry-secret
         ports:
         - containerPort: 8080
 ---
