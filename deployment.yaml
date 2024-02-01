@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: hprofile
-        image: 339713042958.dkr.ecr.us-east-1.amazonaws.com/actapp:23
+        image: 339713042958.dkr.ecr.us-east-1.amazonaws.com/actapp:14
         ports:
         - containerPort: 8080
       imagePullSecrets:
