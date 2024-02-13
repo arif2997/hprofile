@@ -12,7 +12,7 @@ spec:
     path: ./
   destination: 
     server: https://kubernetes.default.svc
-    namespace: hprofile
+    namespace: hprofile1
 
   syncPolicy:
     syncOptions:
