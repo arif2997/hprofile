@@ -35,6 +35,7 @@ jobs:
            -Dsonar.junit.reportsPath=target/surefire-reports/ 
            -Dsonar.jacoco.reportsPath=target/jacoco.exec 
            -Dsonar.java.checkstyle.reportPaths=target/checkstyle-result.xml
+<<<<<<< HEAD
            -Dsonar.java.binaries=target/test-classes/com/visualpathit/account/controllerTest/
 
       # Check the Quality Gate status.
@@ -46,3 +47,6 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_URL }} #OPTIONAL  
+=======
+           -Dsonar.java.binaries=target/test-classes/com/visualpathit/account/controllerTest
+>>>>>>> ac77f45be939559aaa6111a6dd9926bfb8e98e20
