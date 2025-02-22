@@ -7,11 +7,8 @@ jobs:
       - name: Code checkout
         uses: actions/checkout@v4
 
-      - name: Maven test
-        run: mvn test
-
-      - name: Checkstyle
-        run: mvn checkstyle:checkstyle
+      - name: Maven clean
+        run: mvn clean verify
 
       # Setup java 11 to be default (sonar-scanner requirement as of 5.x)
       - name: Set Java 11
